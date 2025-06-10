@@ -1,4 +1,5 @@
 # gh-deployment-workflow
+
 # GitHub Pages Deployment
 Write a simple GitHub Actions workflow to deploy a static website to GitHub Pages.
 
@@ -33,12 +34,6 @@ Continue solving more projects for advanced CI/CD concepts.
 [main 96c2e65] Add index.html with greeting message
  1 file changed, 11 insertions(+)
  create mode 100644 index.html
-@olathoait ➜ /workspaces/gh-deployment-workflow (main) $ git push orgin main
-fatal: 'orgin' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
 @olathoait ➜ /workspaces/gh-deployment-workflow (main) $ git push origin main
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
@@ -54,3 +49,5 @@ To https://github.com/olathoait/gh-deployment-workflow
 # Configuring a publishing source for your github pages site
 
 https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+https://olathoait.github.io/gh-deployment-workflow/
