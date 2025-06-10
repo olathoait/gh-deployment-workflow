@@ -49,3 +49,8 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/olathoait/gh-deployment-workflow
    c7717b3..96c2e65  main -> main
 ```
+
+
+# Configuring a publishing source for your github pages site
+
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
