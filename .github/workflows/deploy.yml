@@ -1,0 +1,40 @@
+name: Deployment Workflow
+
+# Trigger workflow khi có push vào nhánh chính
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Bước 1: Checkout mã nguồn của bạn
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Bước 2: Cài đặt Node.js (có thể thay đổi phiên bản phù hợp với dự án của bạn)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      # Bước 3: Cài đặt các dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Bước 4: Chạy kiểm thử (tests)
+      - name: Run tests
+        run: npm test
+
+      # Bước 5: Build dự án
+      - name: Build project
+        run: npm run build
+
+      # Bước 6: Triển khai (deploy)
+      - name: Deploy to Production
+        run: npm run deploy
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
